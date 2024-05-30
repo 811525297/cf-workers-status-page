@@ -1,39 +1,65 @@
 settings:
-  title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
-  logo: logo-192x192.png # image in ./public/ folder
-  daysInHistogram: 90 # number of days you want to display in histogram
-  collectResponseTimes: true # collects avg response times from CRON locations
+  title: '状态页面'  # 标题
+  url: 'https://status-page.eidam.dev'  # 用于Slack消息的URL
+  logo: logo-192x192.png  # 位于./public/文件夹中的图片
+  daysInHistogram: 90  # 直方图中显示的天数
+  collectResponseTimes: true  # 是否收集CRON位置的平均响应时间
 
-  allmonitorsOperational: 'All Systems Operational'
-  notAllmonitorsOperational: 'Not All Systems Operational'
-  monitorLabelOperational: 'Operational'
-  monitorLabelNotOperational: 'Not Operational'
-  monitorLabelNoData: 'No data'
-  dayInHistogramNoData: 'No data'
-  dayInHistogramOperational: 'All good'
-  dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
+  allmonitorsOperational: '所有系统运行正常'  # 所有监控正常时的状态消息
+  notAllmonitorsOperational: '部分系统运行异常'  # 有监控不正常时的状态消息
+  monitorLabelOperational: '运行正常'  # 单个监控正常时的标签
+  monitorLabelNotOperational: '运行异常'  # 单个监控不正常时的标签
+  monitorLabelNoData: '无数据'  # 单个监控没有数据时的标签
+  dayInHistogramNoData: '无数据'  # 直方图中无数据的天数标签
+  dayInHistogramOperational: '一切正常'  # 直方图中正常的天数标签
+  dayInHistogramNotOperational: ' 次事件'  # 直方图中不正常的天数标签，格式为 xx 次事件
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
-    method: GET # default=GET
-    expectStatus: 200 # operational status, default=200
-    followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
+  - id: zh52.cn  # 唯一标识符
+    name: zh52.cn  # 名称
+    description: 'zh52.cn 主站'  # 描述，默认=空
+    url: 'https://zh52.cn/'  # 需要获取的URL
+    method: GET  # 请求方法，默认=GET
+    expectStatus: 200  # 正常状态码，默认=200
+    followRedirect: false  # 是否跟随重定向，默认=false
+    linkable: true  # 标题是否可链接，默认=true
 
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: www-zh52-cn
+    name: www.zh52.cn
+    description: 'www.zh52.cn'
+    url: 'https://www.zh52.cn'
     method: GET
     expectStatus: 200
-    linkable: true # allows the title to be a link, default=true
+    linkable: true
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: blog-zh52-cn
+    name: blog.zh52.cn
+    description: 'zh52.cn'
+    url: 'https://blog.zh52.cn/'
     method: GET
     expectStatus: 200
+    linkable: true
+
+  - id: mz-zh52-cn
+    name: mz.zh52.cn
+    description: 'mz.zh52.cn'
+    url: 'https://mz.zh52.cn/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
+  - id: m-zh52-cn
+    name: m.zh52.cn
+    description: 'm.zh52.cn'
+    url: 'https://m.zh52.cn/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+
+  - id: m-anchen-us-kg
+    name: m.anchen.us.kg
+    description: 'm.anchen.us.kg、'
+    url: 'https://m.anchen.us.kg/'
+    method: GET
+    expectStatus: 200
+    linkable: true

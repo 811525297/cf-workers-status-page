@@ -63,3 +63,11 @@ monitors:
     method: GET
     expectStatus: 200
     linkable: true
+    
+  - id: alist.web66.us.kg
+    name: alist.web66.us.kg
+    description: 'alist.web66.us.kg、'
+    url: 'https://alist.web66.us.kg/'
+    method: GET
+    expectStatus: 200
+    linkable: true

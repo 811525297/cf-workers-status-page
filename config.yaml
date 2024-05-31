@@ -57,7 +57,7 @@ monitors:
     linkable: true
 
   - id: m-anchen-us-kg
-    name: m.anchen.us.kg
+    name: m.anchen.us.kg（常用网站）
     description: 'm.anchen.us.kg、'
     url: 'https://m.anchen.us.kg/'
     method: GET
@@ -65,9 +65,17 @@ monitors:
     linkable: true
     
   - id: alist.web66.us.kg
-    name: alist.web66.us.kg
+    name: alist.web66.us.kg（网盘管理）
     description: 'alist.web66.us.kg、'
     url: 'https://alist.web66.us.kg/'
+    method: GET
+    expectStatus: 200
+    linkable: true
+    
+  - id: im.web66.top
+    name: im.web66.top(图床)
+    description: 'im.web66.top、'
+    url: 'https://im.web66.top/'
     method: GET
     expectStatus: 200
     linkable: true

@@ -15,35 +15,10 @@ settings:
   dayInHistogramNotOperational: ' 次事件'  # 直方图中不正常的天数标签，格式为 xx 次事件
 
 monitors:
-  - id: zh52.cn  # 唯一标识符
-    name: zh52.cn  # 名称
-    description: 'zh52.cn 主站'  # 描述，默认=空
-    url: 'https://zh52.cn/'  # 需要获取的URL
-    method: GET  # 请求方法，默认=GET
-    expectStatus: 200  # 正常状态码，默认=200
-    followRedirect: false  # 是否跟随重定向，默认=false
-    linkable: true  # 标题是否可链接，默认=true
-
-  - id: www-zh52-cn
-    name: www.zh52.cn
-    description: 'www.zh52.cn'
-    url: 'https://www.zh52.cn'
-    method: GET
-    expectStatus: 200
-    linkable: true
-
   - id: blog-zh52-cn
     name: blog.zh52.cn
     description: 'zh52.cn'
     url: 'https://blog.zh52.cn/'
-    method: GET
-    expectStatus: 200
-    linkable: true
-
-  - id: mz-zh52-cn
-    name: mz.zh52.cn
-    description: 'mz.zh52.cn'
-    url: 'https://mz.zh52.cn/'
     method: GET
     expectStatus: 200
     linkable: true
